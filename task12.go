@@ -10,6 +10,7 @@ func (c Celsius) ToFahrenheit() float64 {
 }
 func main() {
 	var a float64
+	fmt.Println("Введите число: ")
 	fmt.Scanln(&a)
 
 	b := Celsius(a).ToFahrenheit()

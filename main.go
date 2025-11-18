@@ -21,7 +21,7 @@ func CopyDigits(filename string) []byte {
 	b, _ := ioutil.ReadFile(filename)
 	b = digitRegexp.Find(b)
 
-	c := append([]byte, b...)
+	c := append([]byte{}, b...)
 
 	return c
 }

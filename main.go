@@ -1,27 +1,47 @@
 package main
 
 import (
-	"digitRegexp"
-	"io/ioutil"
+	// "digitRegexp"
+	"fmt"
 )
 
 // Filter returns a new slice holding only
 // the elements of s that satisfy fn()
-func Filter(s []int, fn func(int) bool) []int {
-	var p []int // == nil
-	for _, v := range s {
-		if fn(v) {
-			p = append(p, v)
-		}
-	}
-	return p
-}
+// func Filter(s []int, fn func(int) bool) []int {
+// 	var p []int // == nil
+// 	for _, v := range s {
+// 		if fn(v) {
+// 			p = append(p, v)
+// 		}
+// 	}
+// 	return p
+// }
 
-func CopyDigits(filename string) []byte {
-	b, _ := ioutil.ReadFile(filename)
-	b = digitRegexp.Find(b)
+// func CopyDigits(filename string) []byte {
+// 	b, _ := ioutil.ReadFile(filename)
+// 	b = digitRegexp.Find(b)
 
-	c := append([]byte{}, b...)
+// 	c := append([]byte{}, b...)
 
-	return c
+// 	return c
+// }
+
+func main() {
+	// 1 задача
+	week := [8]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+
+	s := week[1:]
+
+	res1, res2 := len(week), cap(week)
+
+	res3, res4 := len(s), cap(s)
+
+	fmt.Println("Длина и ёмкость массива:", res1, res2)
+	fmt.Println("Длина и ёмкость среза:", res3, res4)
+
+	// 2 задача
+
+	fmt.Println(week)
+	fmt.Println(week[1])
+	fmt.Println(week[:1], week[2:])
 }

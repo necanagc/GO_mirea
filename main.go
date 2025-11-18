@@ -28,7 +28,7 @@ import (
 
 func main() {
 	// 1 задача
-	week := [8]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
+	week := [7]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
 
 	s := week[1:]
 
@@ -44,4 +44,13 @@ func main() {
 	fmt.Println(week)
 	fmt.Println(week[1])
 	fmt.Println(week[:1], week[2:])
+
+	// 3 задача
+
+	week1 := week[:]
+
+	for i := 0; i < 7; i++ {
+		week1 = append(week1, "Пятница")
+	}
+	fmt.Println(week1)
 }

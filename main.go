@@ -30,8 +30,8 @@ func main() {
 	// 1 задача
 	week := [7]string{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}
 
-	s := week[1:]
-
+	s := week[2:]
+	fmt.Println(s)
 	res1, res2 := len(week), cap(week)
 
 	res3, res4 := len(s), cap(s)
@@ -53,4 +53,7 @@ func main() {
 		week1 = append(week1, "Пятница")
 	}
 	fmt.Println(week1)
+
+	// 4 задача
+
 }
